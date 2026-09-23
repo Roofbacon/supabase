@@ -79,7 +79,8 @@ resources:
             - endpoint:
                 address:
                   socket_address:
-                    address: realtime-dev.supabase-realtime
+                    # Coolify uses the Compose service DNS name on its managed network.
+                    address: realtime
                     port_value: 4000
     health_checks:
       - timeout: 2s
